@@ -1,9 +1,19 @@
 class Player
 
-  attr_reader :name
+  DEFAULT_HP = 40
+  attr_reader :name, :hp
 
-  def initialize(name)
+  def initialize(name, hp = DEFAULT_HP)
     @name = name
+    @hp = hp
+  end
+
+  def get_attacked
+    @hp -= 10
+  end
+
+  def attack(hero)
+    hero.get_attacked
   end
 
 end
