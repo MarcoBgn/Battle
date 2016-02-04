@@ -16,13 +16,6 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'can attack' do
-      expect(zeratuul).to receive(:get_attacked)
-      nova.attack(zeratuul)
-    end
-  end
-
   describe '#get_attacked' do
     it 'reduces HP by 10' do
       expect{zeratuul.get_attacked}.to change{zeratuul.hp}.by -10

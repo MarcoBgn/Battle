@@ -12,8 +12,5 @@ class Player
     @hp -= 10
   end
 
-  def attack(hero)
-    hero.get_attacked
-  end
 
 end
